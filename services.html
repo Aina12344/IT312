@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JoyHub | Our Services</title>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   	<link rel="stylesheet" href = "style.css">
+
+</head>
+<body>
+
+    <!-- Header-->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="JoyHub Logo">
+            
+        </a>
+        <nav class="navbar">
+            <a href="#">Settings</a> 
+            <a href="services.html">Services</a> 
+            <a href="#">Customer</a>
+            <a href="#">Provider</a>
+            <a href="#">About Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- preview -->
+        <section class="page-hero">
+            <h1>Our Services</h1>
+            <p>From dream weddings to flawless corporate events, we craft unforgettable experiences. Explore our services and let's start planning.</p>
+        </section>
+        
+        <!-- sort bar -->
+        <section class="sort-bar">
+            <label for="sort-criteria">Sort by:</label>
+            <select id="sort-criteria" name="sort-criteria">
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="price-low">Price (Low-High)</option>
+                <option value="price-high">Price (High-Low)</option>
+            </select>
+        </section>
+
+        <!-- Services List -->
+        <section class="services-list">
+            <div class="container">
+                
+                <article class="service-item" id="planning">
+                    <div class="service-image">
+                        <img src="img/planning.png" alt="Event Planning">
+                    </div>
+                    <div class="service-content">
+                        <h2>Event Planning</h2>
+                        <p class="description">Our complete event planning package is designed for a stress-free experience. We manage every detail from conception to execution.</p>
+                        <h3>What's Included:</h3>
+                        <ul>
+                            <li>Full Vendor Coordination</li>
+                            <li>Budget Creation & Tracking</li>
+                            <li>Detailed Event Timeline</li>
+                            <li>On-site Day-of Management</li>
+                        </ul>
+                        <div class="price">Starting from 1500 SAR</div>
+                    </div>
+                </article>
+
+                <article class="service-item" id="invitation">
+                    <div class="service-image">
+                        <img src="img/invitation.png" alt="Invitation Design">
+                    </div>
+                    <div class="service-content">
+                        <h2>Invitation Design</h2>
+                        <p class="description">Set the perfect tone with stunning, custom-made invitations. Our designers work with you to create stationery that reflects your unique style.</p>
+                        <h3>What's Included:</h3>
+                        <ul>
+                            <li>Personalized Design Consultation</li>
+                            <li>Custom Digital & Print-Ready Files</li>
+                            <li>Matching RSVP Cards</li>
+                            <li>Up to Three Design Revisions</li>
+                        </ul>
+                        <div class="price">Starting from 560 SAR</div>
+                    </div>
+                </article>
+
+                <article class="service-item" id="photography">
+                    <div class="service-image">
+                        <img src="img/photography.png" alt="Photography">
+                    </div>
+                    <div class="service-content">
+                        <h2>Photography</h2>
+                        <p class="description">Preserve your precious memories. We specialize in capturing the authentic emotions and key moments of your event, delivering beautiful photos you'll cherish.</p>
+                        <h3>What's Included:</h3>
+                        <ul>
+                            <li>Full Event Coverage (Up to 6 hours)</li>
+                            <li>Candid and Posed Portrait Sessions</li>
+                            <li>High-Resolution Digital Gallery</li>
+                            <li>Professional Photo Editing</li>
+                        </ul>
+                        <div class="price">Starting from 1875 SAR</div>
+                    </div>
+                </article>
+
+                <article class="service-item" id="buffet">
+                    <div class="service-image">
+                        <img src="img/buffet.png" alt="Buffet Services">
+                    </div>
+                    <div class="service-content">
+                        <h2>Buffet Services</h2>
+                        <p class="description">Delight your guests with a culinary experience to remember. We offer a wide range of menus with the freshest ingredients and impeccable presentation.</p>
+                        <h3>What's Included:</h3>
+                        <ul>
+                            <li>Custom Menu Consultation</li>
+                            <li>Full Buffet Setup & Teardown</li>
+                            <li>Serving Staff (Optional)</li>
+                            <li>Choice of Cuisines</li>
+                        </ul>
+                        <div class="price">Starting from 1125 SAR</div>
+                    </div>
+                </article>
+
+                <article class="service-item" id="decoration">
+                    <div class="service-image">
+                        <img src="img/decoration.png" alt="Decoration">
+                    </div>
+                    <div class="service-content">
+                        <h2>Decoration</h2>
+                        <p class="description">From stunning floral arrangements to elegant lighting, our team will transform your venue into a breathtaking setting that perfectly matches your vision.</p>
+                        <h3>What's Included:</h3>
+                        <ul>
+                            <li>Thematic Design Consultation</li>
+                            <li>Floral Centerpieces & Arrangements</li>
+                            <li>Ambient & Accent Lighting</li>
+                            <li>Full Setup & Teardown</li>
+                        </ul>
+                        <div class="price">Starting from 900 SAR</div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        
+        <!-- request -->
+        <section class="request-cta">
+            <a href="#" class="btn-cta">Request a Service</a>
+        </section>
+    </main>
+	
+  <!-- Footer -->
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="contact">
+        <p><i class="fa-solid fa-phone"></i> +966552986136</p>
+        <p><i class="fa-solid fa-envelope"></i> JoyHub@outlook.com</p>
+      </div>
+
+      <div class="social">
+        <a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="" title="X"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 JoyHub. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+

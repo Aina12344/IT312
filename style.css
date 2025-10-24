@@ -1,0 +1,438 @@
+:root {
+    --color-primary: #d63384;
+    --color-primary-dark: #a1005a;
+    --color-text: #343a40;
+    --color-text-light: #6c757d;
+    --color-surface: #ffffff;
+    --color-background: #fff8fb;
+    --shadow-md: 0 8px 30px rgba(214, 51, 132, 0.1);
+    --shadow-lg: 0 18px 40px rgba(214, 51, 132, 0.2);
+    --font-family-base: 'Poppins', sans-serif;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: var(--font-family-base);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--color-primary-dark);
+    margin-bottom: 2.5rem;
+}
+
+/* --- Header  --- */
+.header {
+    background-color: var(--color-surface);
+    padding: 1rem 2.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* Flexbox Requirement */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+.logo img {
+    width: 150px;
+    height: 50px;
+    border-radius: var(--border-radius-md);
+}
+.logo span {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+.navbar {
+    /* Flexbox Requirement */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+}
+.navbar a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-left: 1px solid #ddd; 
+    transition: color 0.2s ease;
+}
+.navbar a:first-child { border-left: none; }
+.navbar a:hover { color: var(--color-primary); }
+.navbar a.active {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* --- Page Hero (Used on both pages) --- */
+.page-hero {
+    padding: 5rem 1.5rem;
+    background: linear-gradient(120deg, var(--color-primary), var(--color-primary-dark));
+    text-align: center;
+    color: var(--color-surface);
+}
+.page-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+.page-hero p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* --- HOMEPAGE: Services --- */
+.services-section {
+    padding: 4rem 1.5rem;
+}
+.services-container {
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.service-card {
+    flex-basis: 280px; 
+    flex-grow: 1;  
+    flex-shrink: 1; 
+    max-width: 320px; 
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden; 
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.service-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-primary-dark);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Hover */
+.info-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(214, 51, 132, 0.85), rgba(161, 0, 90, 0.95));
+    color: var(--color-surface);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+.service-card:hover .info-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+.info-overlay h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.info-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* See All Services Link */
+.see-all-link {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+.see-all-link a {
+    text-decoration: none;
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+.see-all-link a:hover {
+    text-decoration: underline;
+    color: var(--color-primary);
+}
+
+/* --- HOMEPAGE: Customer Reviews --- */
+.reviews-section {
+    padding: 4rem 1.5rem;
+    background-color: var(--color-surface);
+}
+.reviews-container {
+    /* Items side-by-side */
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.review-box {
+    flex-basis: 220px; 
+    flex-grow: 1;   
+    flex-shrink: 1; 
+    max-width: 230px; 
+    background-color: var(--color-background);
+    border: 1px solid #f0e6ea;
+    border-radius: var(--border-radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+}
+.review-box .rating {
+    font-size: 1.1rem;
+    color: #ffbf00; /* Gold */
+    margin-bottom: 0.75rem;
+}
+.review-box blockquote {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--color-primary);
+    padding-left: 1rem;
+}
+.review-box .author {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-primary-dark);
+}
+
+/* --- HOMEPAGE: offers Section --- */
+.offers-section {
+    padding: 4rem 1.5rem;
+}
+.offers-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.offer-box {
+    background: linear-gradient(120deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-surface);
+    padding: 2.5rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    flex: 1;
+    max-width: 450px;
+    text-align: center;
+}
+.offer-box h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+.offer-box .highlight {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* --- Footer  --- */
+.footer {
+    background-color: #f7c8e0;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+}
+.footer-contact p { margin-bottom: 1rem; }
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.social-links a { color: pink); }
+.footer .copyright {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+
+/* ================================================
+STYLES FOR SERVICES.HTML
+================================================
+*/
+
+/* --- SERVICES PAGE: Sort Bar --- */
+.sort-bar {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border-bottom: 1px solid #eee;
+}
+.sort-bar label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: var(--color-text);
+}
+.sort-bar select {
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: var(--font-family-base);
+    font-weight: 600;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+/* --- SERVICES PAGE: Services List --- */
+.services-list {
+    padding: 4rem 1.5rem;
+}
+.service-item {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 3rem;
+    padding: 2.5rem; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.service-image { flex-basis: 45%; }
+.service-image img {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    display: block;
+    box-shadow: var(--shadow-md);
+}
+
+.service-content { flex-basis: 55%; }
+.service-content h2 {
+    text-align: left;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.75rem;
+}
+.service-content .description {
+    margin-bottom: 1.5rem;
+}
+
+.service-content h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-background);
+    padding-bottom: 0.25rem;
+}
+.service-content ul {
+    list-style-type: none;
+    margin-bottom: 1.5rem;
+}
+.service-content ul li {
+    padding-left: 1.75rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.service-content ul li::before {
+    content: '\f00c'; 
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
+}
+
+.service-content .price {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    background-color: var(--color-background);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    margin-top: 1rem;
+}
+
+/* --- SERVICES PAGE: CTA Button --- */
+.request-cta {
+    text-align: center;
+    padding: 2rem 0 4rem 0;
+}
+.btn-cta {
+    display: inline-block;
+    background: linear-gradient(120deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-surface);
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    border: none;
+    animation: pulse 2s infinite;
+}
+.btn-cta:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(214, 51, 132, 0.3);
+    animation: none;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
