@@ -560,9 +560,7 @@ STYLES FOR SERVICES.HTML
   transform: translateY(-3px);
 }
 
-/* ============================
-STAFF PROFILE PAGE (FINAL CLEAN VERSION)
-============================ */
+/* STAFF PROFILE PAGE  */
 
 .staff-profile {
   min-height: 85vh;
@@ -584,7 +582,7 @@ STAFF PROFILE PAGE (FINAL CLEAN VERSION)
 
 /* main table */
 .staff-profile table {
-  width: 95%; /* give table more room */
+  width: 95%; 
   margin: 0 auto;
   border-collapse: collapse;
   background: #fff;
@@ -594,7 +592,7 @@ STAFF PROFILE PAGE (FINAL CLEAN VERSION)
   border-radius: 12px;
   color: #a0145a !important;
   font-weight: 500;
-  table-layout: fixed; /* equal columns */
+  table-layout: fixed; 
 }
 
 /* cells */
@@ -607,7 +605,7 @@ STAFF PROFILE PAGE (FINAL CLEAN VERSION)
   text-align: center;
   white-space: normal; /* allow full text display */
   word-break: break-word; /* wrap long words if needed */
-  overflow: visible; /* show everything */
+  overflow: visible; 
 }
 
 /* header */
@@ -631,9 +629,7 @@ STAFF PROFILE PAGE (FINAL CLEAN VERSION)
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ============================
-LIST STYLE (Skills & Education)
-============================ */
+/*LIST STYLE (Skills & Education) */
 .staff-profile ul {
   list-style-type: disc;
   text-align: left;
@@ -661,9 +657,6 @@ LIST STYLE (Skills & Education)
   font-weight: 400;
 }
 
-/* ============================
-UNIFORM COLUMN WIDTHS
-============================ */
 .staff-profile table th,
 .staff-profile table td {
   width: calc(100% / 7); /* same width for all columns */
@@ -677,5 +670,6 @@ UNIFORM COLUMN WIDTHS
   transition: none;
   box-shadow: 0 8px 25px rgba(214, 51, 132, 0.15);
 }
+
 
 
