@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Staff</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div style="width:40px; height:40px; border:1px solid #000;">Link</div>
+      <h2>JoyHub</h2>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Settings</a>
+      <a href="#">Services</a>
+      <a href="#">Customer</a>
+      <a href="#">Provider</a>
+      <a href="#">About Us</a>
+    </nav>
+  </header>
+
+ 
+  <main>
+    <h2 style="margin-left:20px;">Manage staff</h2>
+
+    <div class="manage-container">
+      <!-- Left side: delete members -->
+      <section>
+        <p><strong>Delete a member:</strong></p>
+        <div class="member-list">
+          <div class="member">
+            <div class="info">
+              <div class="icon"><img src="profile1.png" alt="profile1"></div>
+              <span>Ghena Fahd</span>
+            </div>
+            <input type="checkbox">
+          </div>
+
+          <div class="member">
+            <div class="info">
+              <div class="icon"><img src="profile2.png" alt="profile2"></div>
+              <span>Norah Al Hosain</span>
+            </div>
+            <input type="checkbox">
+          </div>
+
+          <div class="member">
+            <div class="info">
+              <div class="icon"><img src="profile3.png" alt="profile3"></div>
+              <span>Jawaher Alrasheed</span>
+            </div>
+            <input type="checkbox">
+          </div>
+
+          <div class="member">
+            <div class="info">
+              <div class="icon"><img src="profile1.png" alt="profile4"></div>
+              <span>Shahad Homoud</span>
+            </div>
+            <input type="checkbox">
+          </div>
+        </div>
+        <br>
+        <button>Delete member</button>
+      </section>
+
+      <!-- Right side: add new member form -->
+    <div class="add-section">
+  <div class="add-form-title">Add a new member:</div>
+  <div class="add-form">
+    <form>
+          <label>Name:</label>
+          <input type="text">
+
+          <label>Date of Birth:</label>
+          <input type="date">
+
+          <label>Email:</label>
+          <input type="email"><label>Skills:</label>
+          <input type="text">
+
+          <label>Area of expertise:</label>
+          <input type="text">
+
+          <label>Education:</label>
+          <textarea></textarea>
+
+          <label>Photo:</label>
+          <!-- Hidden file input -->
+          <input type="file" id="photoInput" accept="image/*" capture="environment" style="display:none;">
+          <!-- Clickable image -->
+          <img src="adds.png" alt="addphoto" id="photoPreview" class="placeholder">
+
+          <button type="submit">Add a new member</button>
+        </form>
+     
+    </div>
+  </main>
+
+  <script>
+ 
+</body>
+</html>

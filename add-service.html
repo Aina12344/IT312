@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Service</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div style="width:40px; height:40px; border:1px solid #000;">Link</div>
+      <h2>JoyHub</h2>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Settings</a>
+      <a href="#">Services</a>
+      <a href="#">Customer</a>
+      <a href="#">Provider</a>
+      <a href="#">About Us</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">Home > provider > Add service</div>
+
+  <main>
+    <h2>Add Service</h2>
+
+    <form>
+      <label>Service Name:</label>
+      <input type="text" name="serviceName">
+
+      <label>Service photo:</label>
+      <img src="adds.png" alt="addphoto" id="photoPreview" class="placeholder">
+      <label>Price:</label>
+      <div class="flex">
+        <input type="number" name="price" placeholder="0">
+        <select>
+          <option>SAR</option>
+          <option>USD</option>
+        </select>
+      </div>
+
+      <label>Description:</label>
+      <textarea></textarea>
+
+      <div class="center">
+        <button type="submit" style="border-radius:50%; width:40px; height:40px; font-size:20px;">+</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
