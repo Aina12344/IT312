@@ -340,6 +340,7 @@ STYLES FOR SERVICES.HTML
     margin-bottom: 3rem;
     padding: 2.5rem; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+	position: relative;
 }
 .service-item:hover {
     transform: translateY(-10px);
@@ -850,6 +851,81 @@ STYLES FOR SERVICES.HTML
 .customer-stars label:hover ~ label {
   color: gold;
 }
+/* WISHLIST HEART ICON STYLE*/
+.wishlist-icon {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 10;
+}
 
+.wishlist-label i {
+  font-size: 28px;
+  color: #ccc; 
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
 
+.wishlist-label i:hover {
+  transform: scale(1.1);
+  color: var(--color-primary); 
+}
+
+.wishlist-checkbox {
+  display: none;
+}
+
+.wishlist-checkbox:checked + .wishlist-label i {
+      color: var(--color-primary-dark); 
+  transform: scale(1.2);
+}
+/* WISHLIST PAGE STYLE */
+.wishlist-page {
+  padding: 4rem 1.5rem;
+}
+
+.wishlist-page h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #a0145a;
+  margin-bottom: 2rem;
+}
+
+.wishlist-item {
+  background: #fff8fb;
+  border: 2px solid #f7c8e0;
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(214, 51, 132, 0.1);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.wishlist-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(214, 51, 132, 0.25);
+}
+
+.wishlist-item img {
+  width: 100px;
+  height: 90px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #f3cce0;
+}
+
+.wishlist-item .details {
+  flex: 1;
+  margin-left: 1rem;
+  color: #a0145a;
+}
+
+.wishlist-item .details strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #d63384;
+}
 
