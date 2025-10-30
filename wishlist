@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JoyHub | Wish List</title>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   	<link rel="stylesheet" href = "style.css">
+</head>
+<body>
+
+    <!-- Header-->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="JoyHub Logo">
+            
+        </a>
+        <nav class="navbar">
+            <a href="wishlist.html">Wish List</a> 
+            <a href="services.html">Services</a> 
+            <a href="#">Customer</a>
+            <a href="#">Provider</a>
+            <a href="aboutus.html">About Us</a>
+        </nav>
+    </header>
+
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="customer-breadcrumb">
+    </div>
+    <h1>Wish List</h1>
+  </div>
+</section>
+
+
+<main class="wishlist-page container">
+  <h2>Your Saved Services</h2>
+
+  <!--ITEM 1-->
+  <div class="wishlist-item">
+    <img src="img/photography.png" alt="Photography">
+    <div class="details">
+      <strong>Photography</strong>
+      <span>Capture your best memories with professional photographers.</span>
+    </div>
+    <div class="wishlist-actions">
+      <a href="request-service.html" class="customer-btn">Request</a>
+    </div>
+  </div>
+
+  <!--WISH ITEM 2-->
+  <div class="wishlist-item">
+    <img src="img/decoration.png" alt="Decoration">
+    <div class="details">
+      <strong>Decoration</strong>
+      <span>Beautiful setups for weddings, birthdays, and special occasions.</span>
+    </div>
+    <div class="wishlist-actions">
+      <a href="request-service.html" class="customer-btn">Request</a>
+    </div>
+  </div>
+
+  <!--WISH ITEM 3-->
+  <div class="wishlist-item">
+    <img src="img/invitation.png" alt="Invitation Design">
+    <div class="details">
+      <strong>Invitation Design</strong>
+      <span>Custom invitations that match your event’s theme perfectly.</span>
+    </div>
+    <div class="wishlist-actions">
+      <a href="request-service.html" class="customer-btn">Request</a>
+    </div>
+  </div>
+
+  <!--WISH ITEM 4-->
+  <div class="wishlist-item">
+    <img src="img/planning.png" alt="Event Planning">
+    <div class="details">
+      <strong>Event Planning</strong>
+      <span>From concept to execution, we handle every detail of your event.</span>
+    </div>
+    <div class="wishlist-actions">
+      <a href="request-service.html" class="customer-btn">Request</a>
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="contact">
+        <p><i class="fa-solid fa-phone"></i> +966552986136</p>
+        <p><i class="fa-solid fa-envelope"></i> JoyHub@outlook.com</p>
+      </div>
+
+      <div class="social">
+        <a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="" title="X"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 JoyHub. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+
