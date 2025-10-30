@@ -703,7 +703,7 @@ STYLES FOR SERVICES.HTML
 .customer-subtitle {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   margin-bottom: 1rem;
 }
 
@@ -851,5 +851,5 @@ STYLES FOR SERVICES.HTML
   color: gold;
 }
 
-/* ===== FOOTER (unchanged - same as friend) ===== */
+
 
