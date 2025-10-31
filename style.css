@@ -626,19 +626,29 @@ STYLES FOR SERVICES.HTML
       box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .provider-left:hover {
+.provider-left:hover {
       transform: scale(1.03);
       box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+    } 
+.page-subtitle {
+     text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  position: relative;
     }
 
-    .provider-left h2 {
-      text-align: center;
-      color: #800040;
-      font-weight: bold;
-      border-bottom: 2px solid #ff99cc;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
+    .page-subtitle::after {
+      content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 10px;
     }
 
     .custom-list {
@@ -723,23 +733,25 @@ STYLES FOR SERVICES.HTML
   flex-wrap: wrap;
 }
   
- .page-subtitle {
-      color: #800040;
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-align: center;
-      font-size: 20px;
-      position: relative;
+.page-subtitle {
+     text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  position: relative;
     }
 
     .page-subtitle::after {
       content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: #a1005a;
-      margin: 6px auto 0;
-      border-radius: 3px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 10px;
     }
 
     /* ===== Card ===== */
@@ -833,24 +845,25 @@ STYLES FOR SERVICES.HTML
       box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
     }
 
-
 .page-subtitle {
-      color: #800040;
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-align: center;
-      font-size: 20px;
-      position: relative;
+     text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  position: relative;
     }
 
     .page-subtitle::after {
       content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: #a1005a;
-      margin: 6px auto 0;
-      border-radius: 3px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 10px;
     }
     
 
@@ -1276,5 +1289,6 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
