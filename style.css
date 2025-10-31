@@ -833,21 +833,32 @@ STYLES FOR SERVICES.HTML
     }
 
     /* ====== Left Card (Delete Member) ====== */
-.manage-left {
-  background: #fff;
-  padding: 25px;
-  width: 450px;
+.memberD-form {
+  background:  #fff;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-  min-height: 677px; /* يخلي الطول ثابت */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 25px 20px;
+  box-shadow: 0 4px 15px rgba(214, 51, 132, 0.1);
+  width: 450px;
 }
 
-    .manage-left:hover {
+.memberD-form .member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.memberD-form .member {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffeef6;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.member-list{
+  min-height: 510px;
+}
+    .memberD-form:hover {
       transform: scale(1.03);
       box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
     }
@@ -1360,6 +1371,7 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
