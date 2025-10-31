@@ -436,6 +436,186 @@ STYLES FOR SERVICES.HTML
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
+/*--------------------------------------norah work---------------------------*/
+
+
+/* ===== BREADCRUMB ===== */
+.customer-breadcrumb {
+  font-size: 0.95rem;
+  color: #fce4ef;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.customer-breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+.customer-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ===== PAGE TITLE ===== */
+.customer-page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: left;
+}
+
+/* ===== SUBTITLE (مثل Previous Requests) ===== */
+.customer-subtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+}
+
+/* ===== REQUEST CARDS ===== */
+.customer-requests-wrap {
+  background: #fff8fb;
+  border: 1px solid #f7c8e0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.customer-request-item {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  align-items: center;
+  background: #ffeaf3;
+  border: 2px solid #f7c8e0;
+  border-radius: 14px;
+  padding: 16px;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.customer-request-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.customer-request-item img {
+  width: 120px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid var(--color-primary);
+}
+
+.request-meta span {
+  display: block;
+  font-size: 15px;
+  color: var(--color-primary-dark);
+}
+
+.request-meta strong {
+  font-size: 17px;
+  color: var(--color-primary);
+}
+
+.request-price {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-primary-dark);
+}
+
+/* ===== BUTTONS ===== */
+.customer-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 30px 0;
+}
+
+.customer-btn {
+  background: linear-gradient(120deg, var(--color-primary), var(--color-primary-dark));
+  color: #fff;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.customer-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(214, 51, 132, 0.25);
+}
+
+/* ===== FORMS ===== */
+.customer-form {
+  background: var(--color-surface);
+  padding: 2rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.customer-form label {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.customer-form input[type="text"],
+.customer-form input[type="date"],
+.customer-form select,
+.customer-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #f3cce0;
+  border-radius: 8px;
+  background-color: #fff7fa;
+  transition: all 0.3s ease;
+}
+.customer-form input:focus,
+.customer-form select:focus,
+.customer-form textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 8px rgba(214,51,132,0.2);
+  outline: none;
+}
+.customer-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ===== RATING (STARS) ===== */
+.customer-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.customer-stars {
+  display: inline-flex;
+  direction: rtl;
+  gap: 6px;
+}
+.customer-stars input { display: none; }
+.customer-stars label {
+  font-size: 26px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+}
+.customer-stars label::before {
+  content: "★";
+}
+.customer-stars input:checked ~ label,
+.customer-stars label:hover,
+.customer-stars label:hover ~ label {
+  color: gold;
+}
+
+/*-------------------------------------norah end------------------------------------------------*/
 
 /* -------------------------------------------------ghena work-------------------------------------*/
   .provider-left {
@@ -790,4 +970,3 @@ STYLES FOR SERVICES.HTML
     }
 
    /*-------------------------ghena end----------------------*/
-
