@@ -1,54 +1,78 @@
-s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Add Service</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Add Service | JoyHub</title>
+ <!-- Font Awesome for social media icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style (4).css">
+
+   
+   
 </head>
+
 <body>
-  <!-- Header -->
-    <header class="header">
-        <a href="index.html" class="logo">
-            <img src="img/logo.png" alt="JoyHub Logo">
-        </a>
-        <nav class="navbar">
-            <a href="wishlist.html">Wish List</a> 
+
+  <header class="header">
+    <a href="index (1).html" class="logo"><img src="logo.png" alt="JoyHub Logo"></a>
+    <nav class="navbar">
+    <a href="wishlist.html">Wish List</a> 
             <a href="services.html">Services</a>
             <a href="customer-dashboard.html">Customer</a>
             <a href="provider.html">Provider</a>
             <a href="aboutus.html">About Us</a>
-        </nav>
-    </header>
-	
-  <div class="breadcrumb">Home > provider > Add service</div>
+    
+          
+    </nav>
+  </header>
 
-  <main>
-    <h2>Add Service</h2>
+<section class="page-hero">
+  <h1>Add New Service</h1>
+</section>
+  <div class="classcontainer">
+    <section class="service-wrap">
+     
+      <div class="card">
+        <h3 class="page-subtitle">Form to Add</h3>
+        <form class="add-formp">
+          <label>Service Name:</label>
+          <input type="text" placeholder="e.g. Photography">
 
-    <form>
-      <label>Service Name:</label>
-      <input type="text" name="serviceName">
+          <label>Description:</label>
+          <textarea placeholder="Enter service details..."></textarea><label>Price:</label>
+          <div class="flex">
+            <input type="text" name="price" placeholder="e.g. 2000">
+            <select>
+              <option>SAR</option>
+              <option>USD</option>
+              <option>EUR</option>
+            </select>
+          </div>
 
-      <label>Service photo:</label>
-      <img src="adds.png" alt="addphoto" id="photoPreview" class="placeholder">
-      <label>Price:</label>
-      <div class="flex">
-        <input type="number" name="price" placeholder="0">
-        <select>
-          <option>SAR</option>
-          <option>USD</option>
-        </select>
+          <label>Photo:</label>
+          <input type="file">
+
+          <button class="btn-submit" type="submit"><i class="fa-solid fa-plus"></i> Add Service</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="contact">
+        <p><i class="fa-solid fa-phone"></i> +966552986136</p>
+        <p><i class="fa-solid fa-envelope"></i> JoyHub@outlook.com</p>
       </div>
 
-      <label>Description:</label>
-      <textarea></textarea>
-
-      <div class="center">
-        <button type="submit" style="border-radius:50%; width:40px; height:40px; font-size:20px;">+</button>
+      <div class="social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
       </div>
-    </form>
-  </main>
+    </div>
+    <p class="copyright">© 2025 JoyHub. All Rights Reserved.</p>
+  </footer>
+
 </body>
-
 </html>
-
