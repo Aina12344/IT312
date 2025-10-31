@@ -668,17 +668,24 @@ STYLES FOR SERVICES.HTML
       cursor: pointer;
     }
 
-    .bottom-links {
-      margin-top: 20px;
-      text-align: center;
-    }
+   .bottom-links {
+  margin-top: 20px;
+  display: flex;              /* استخدمنا Flexbox */
+  justify-content: center;    /* وسّط الروابط أفقياً */
+  align-items: center;        /* وسّطها عمودياً */
+  gap: 20px;                  /* مسافة بين الروابط */
+  flex-wrap: wrap;            /* يخليها تنزل تحت إذا الشاشة صغيرة */
+}
 
-    .bottom-links a {
-      color:  #a1005a;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
+.bottom-links a {
+  color: #a1005a;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
 
     .bottom-links a:hover {
       text-decoration: underline;
@@ -1353,6 +1360,7 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
