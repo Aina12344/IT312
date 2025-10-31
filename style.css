@@ -1190,7 +1190,7 @@ STYLES FOR SERVICES.HTML
 .staff-profile ul {
   list-style-type: disc;
   text-align: left;
-  margin-left: 0r;
+  margin-left: 0;
   padding-left: 1rem;
   color: #a0145a !important;
 }
@@ -1371,6 +1371,7 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
