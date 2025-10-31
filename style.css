@@ -833,15 +833,7 @@ STYLES FOR SERVICES.HTML
       box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
     }
 
-  /* ======== Page Title Position ======== */
-.page-title {
-  text-align: left;
-  margin-left: 60px; /* المسافة عن اليسار */
-  margin-top: 40px;
-  color: #a00060;
-  font-weight: 700;
-  font-size: 26px;
-}
+
 .page-subtitle {
       color: #800040;
       font-weight: bold;
@@ -1284,4 +1276,5 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
