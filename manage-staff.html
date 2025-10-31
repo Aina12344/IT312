@@ -2,106 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Manage Staff</title>
-  <link rel="stylesheet" href="style.css">
-  
+  <title>Manage Staff | JoyHub</title>
+  <!-- Font Awesome for social media icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style (4).css">
+
 </head>
+
 <body>
-   <!-- Header -->
-    <header class="header">
-        <a href="index.html" class="logo">
-            <img src="img/logo.png" alt="JoyHub Logo">
-        </a>
-        <nav class="navbar">
-            <a href="wishlist.html">Wish List</a> 
+
+  <header class="header">
+    <a href="index (1).html" class="logo"><img src="logo.png" alt="JoyHub Logo"></a>
+    <nav class="navbar">
+    <a href="wishlist.html">Wish List</a> 
             <a href="services.html">Services</a>
             <a href="customer-dashboard.html">Customer</a>
             <a href="provider.html">Provider</a>
             <a href="aboutus.html">About Us</a>
-        </nav>
-    </header>
-	
-
+    </nav>
+</section>
+  </header>
+  <section class="page-hero">
+  <h1>Manage Staff</h1>
  
-  <main>
-    <h2 style="margin-left:20px;">Manage staff</h2>
+</section>
+ <div class="columns">
+    <!-- Left side -->
+    <section class="manage-left">
+     <h3 class="page-subtitle">Delete a Member</h3>
+     
 
-    <div class="manage-container">
-      <!-- Left side: delete members -->
-      <section>
-        <p><strong>Delete a member:</strong></p>
-        <div class="member-list">
-          <div class="member">
-            <div class="info">
-              <div class="icon"><img src="profile1.png" alt="profile1"></div>
-              <span>Ghena Fahd</span>
-            </div>
-            <input type="checkbox">
+      <div class="member-list">
+        <div class="member">
+          <div class="info">
+            <img src="profile1.png" alt="Member photo">
+            <span>Ghena Fahd</span>
           </div>
-
-          <div class="member">
-            <div class="info">
-              <div class="icon"><img src="profile2.png" alt="profile2"></div>
-              <span>Norah Al Hosain</span>
-            </div>
-            <input type="checkbox">
-          </div>
-
-          <div class="member">
-            <div class="info">
-              <div class="icon"><img src="profile3.png" alt="profile3"></div>
-              <span>Jawaher Alrasheed</span>
-            </div>
-            <input type="checkbox">
-          </div>
-
-          <div class="member">
-            <div class="info">
-              <div class="icon"><img src="profile1.png" alt="profile4"></div>
-              <span>Shahad Homoud</span>
-            </div>
-            <input type="checkbox">
-          </div>
+          <input type="checkbox">
         </div>
-        <br>
-        <button>Delete member</button>
-      </section>
 
-      <!-- Right side: add new member form -->
-    <div class="add-section">
-  <div class="add-form-title">Add a new member:</div>
-  <div class="add-form">
-    <form>
+        <div class="member">
+          <div class="info">
+            <img src="profile2.png" alt="Member photo">
+            <span>Norah Al Hosain</span>
+          </div>
+          <input type="checkbox">
+        </div>
+
+        <div class="member">
+          <div class="info">
+            <img src="profile3.png" alt="Member photo">
+            <span>Jawaher Alrasheed</span>
+          </div>
+          <input type="checkbox">
+        </div>
+
+        <div class="member">
+          <div class="info">
+            <img src="profile1.png" alt="Member photo">
+            <span>Shahad Homoud</span>
+          </div>
+          <input type="checkbox">
+        </div>
+      </div>
+
+      <div class="center">
+        <button class="delete-btn"><i class="fa-solid fa-trash-can"></i> Delete member</button>
+      </div>
+    </section>
+
+    <!-- Right side -->
+    <section class="add-section">
+      <div class="card add-formp">
+ <h3 class="page-subtitle">Add New Member</h3>
+        <form>
           <label>Name:</label>
-          <input type="text">
+          <input type="text" placeholder="Enter name">
+
+          <label>Email:</label>
+          <input type="email" placeholder="Enter email">
 
           <label>Date of Birth:</label>
           <input type="date">
 
-          <label>Email:</label>
-          <input type="email"><label>Skills:</label>
-          <input type="text">
+          <label>Skills:</label>
+          <input type="text" placeholder="Enter Skills">
 
-          <label>Area of expertise:</label>
-          <input type="text">
+          <label>Area of Expertise:</label>
+          <input type="text" placeholder="Enter Area of expertise">
 
           <label>Education:</label>
-          <textarea></textarea>
+          <input type="text" placeholder="Enter Education">
 
           <label>Photo:</label>
-          <!-- Hidden file input -->
-          <input type="file" id="photoInput" accept="image/*" capture="environment" style="display:none;">
-          <!-- Clickable image -->
-          <img src="adds.png" alt="addphoto" id="photoPreview" class="placeholder">
+          <input type="file">
 
-          <button type="submit">Add a new member</button>
+          <button class="btn-submit" type="submit">Add Member</button>
         </form>
-     
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="contact">
+        <p><i class="fa-solid fa-phone"></i> +966552986136</p>
+        <p><i class="fa-solid fa-envelope"></i> JoyHub@outlook.com</p>
+      </div>
+
+      <div class="social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
     </div>
-  </main>
+    <p class="copyright">© 2025 JoyHub. All Rights Reserved.</p>
+  </footer>
 
-  <script>
- 
 </body>
-
 </html>
