@@ -832,11 +832,7 @@ h2 {
   width: 450px;
 }
 
-.memberD-form .member-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+
 
 .memberD-form .member {
   display: flex;
@@ -854,43 +850,43 @@ h2 {
       box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
     }
     
+.memberD-form .member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-    .member-list {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+.member {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffeef6;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .member {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #ffeef6;
-      padding: 10px 15px;
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.member:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+}
 
-    .member:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
-    }
+.member img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
 
-    .member img {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
+.member .info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #800040;
+  font-weight: bold;
+}
 
-    .member .info {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #800040;
-      font-weight: bold;
-    }
-
+  
     .center {
       text-align: center;
       margin-top: 20px;
@@ -1315,6 +1311,7 @@ h2 {
 }
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
