@@ -691,11 +691,11 @@ h2 {
 
    .bottom-links {
   margin-top: 20px;
-  display: flex;             
-  justify-content: center;   
-  align-items: center;       
-  gap: 20px;                 
-  flex-wrap: wrap;           
+  display: flex;              /* استخدمنا Flexbox */
+  justify-content: center;    /* وسّط الروابط أفقياً */
+  align-items: center;        /* وسّطها عمودياً */
+  gap: 20px;                  /* مسافة بين الروابط */
+  flex-wrap: wrap;            /* يخليها تنزل تحت إذا الشاشة صغيرة */
 }
 
 .bottom-links a {
@@ -747,10 +747,40 @@ h2 {
     }
       
 /* =========================
-         Add Service 
+   Add Service Page styles
    ========================= */
-/* ======== Manage Staff  ======== */
+ /* ======== Manage Staff Layout Fix ======== */
+/* ======== Manage Staff Layout Fix ======== */
+
+.columns {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
   
+.page-subtitle {
+     text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  position: relative;
+    }
+
+    .page-subtitle::after {
+      content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 10px;
+    }
 
     /* ===== Card ===== */
     .card {
@@ -823,7 +853,7 @@ h2 {
       min-height: 70vh;
     }
 
-    /* ====== Delete Member ====== */
+    /* ====== Left Card (Delete Member) ====== */
 .memberD-form {
   background:  #fff;
   border-radius: 15px;
@@ -832,7 +862,11 @@ h2 {
   width: 450px;
 }
 
-
+.memberD-form .member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
 .memberD-form .member {
   display: flex;
@@ -841,55 +875,79 @@ h2 {
   background: #ffeef6;
   padding: 10px 15px;
   border-radius: 10px;
-
+}
+.member-list{
+  min-height: 510px;
+}
     .memberD-form:hover {
       transform: scale(1.03);
       box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
     }
-    
-.memberD-form .member-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
 
-.member {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #ffeef6;
-  padding: 10px 15px;
+.page-subtitle {
+     text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  position: relative;
+    }
+
+    .page-subtitle::after {
+      content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+  display: block;
+  margin: 0.5rem auto 0 auto;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    }
+    
 
-.member:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
-}
+    .member-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-.member img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
+    .member {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffeef6;
+      padding: 10px 15px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.member .info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #800040;
-  font-weight: bold;
-}
+    .member:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+    }
 
-  
+    .member img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .member .info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #800040;
+      font-weight: bold;
+    }
+
     .center {
       text-align: center;
       margin-top: 20px;
     }
 
-    /* Add Member */
+    /* ====== Right Card (Add Member) ====== */
     .add-section .add-formp {
       background: #fff;
       padding: 25px;
@@ -1308,15 +1366,6 @@ h2 {
 }
 
 /* ---------------------- end of jawaher's work ---------------------*/
-
-
-
-
-
-
-
-
-
 
 
 
