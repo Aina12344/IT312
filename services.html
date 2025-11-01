@@ -34,15 +34,19 @@
 	</section>
     <main>
         
-        <div class="sort-bar">
-            <label for="sort-criteria">Sort by:</label>
-            <select id="sort-criteria" name="sort-criteria">
-                <option value="name-asc">Name (A-Z)</option>
-                <option value="name-desc">Name (Z-A)</option>
-                <option value="price-low">Price (Low-High)</option>
-                <option value="price-high">Price (High-Low)</option>
-            </select>
-        </div>
+	<div class="sort-bar">
+	  <label for="sort-criteria">Sort by:</label>
+	  <select id="sort-criteria" name="sort-criteria">
+		<optgroup label="Sort by Name">
+		  <option value="name-asc">Name (A-Z)</option>
+		  <option value="name-desc">Name (Z-A)</option>
+		</optgroup>
+		<optgroup label="Sort by Price">
+		  <option value="price-low">Price (Low-High)</option>
+		  <option value="price-high">Price (High-Low)</option>
+		</optgroup>
+	  </select>
+	</div>
 
         <section class="services-list">
             <div class="container">
@@ -161,8 +165,8 @@
             </div>
         </section>
         
-        <div class="request-cta">
-            <a href="request-service.html" class="btn-cta">Request a Service</a>
+        <div class="request-btn">
+            <a href="request-service.html" class="btn">Request a Service</a>
         </div>
     </main>
 	
