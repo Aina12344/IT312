@@ -1041,6 +1041,44 @@ STYLES FOR SERVICES.HTML
   transform: scale(1.05);
 }
 
+/* ===== Team Section (About Us Scroll) ===== */
+.team-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+}
+
+.team-member {
+  flex: 0 0 auto;
+  text-align: center;
+  width: 120px;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 8px;
+  box-shadow: 0 4px 10px rgba(214, 51, 132, 0.25);
+}
+
+.team-member-name a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  transition: color 0.3s ease;
+}
+
+.team-member-name a:hover {
+  color: var(--color-primary);
+}
+
+
 /* join us form */
 .joinus-form form {
   display: flex;
@@ -1337,6 +1375,7 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
