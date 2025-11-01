@@ -1107,10 +1107,9 @@ STYLES FOR SERVICES.HTML
 
 /* Fix staff list box position */
 .aboutus-container {
-  justify-content: flex-start; /* يخلي البوكس يبدأ من اليسار بدل النص */
+  justify-content: flex-start; 
 }
 
-/* تأكدي إن join us box ما يتأثر */
 .aboutus-container .info-box {
   margin-right: auto;
 }
@@ -1156,6 +1155,23 @@ STYLES FOR SERVICES.HTML
   background: linear-gradient(120deg, var(--color-primary-dark), var(--color-primary));
   transform: translateY(-3px);
 }
+
+/* Keep About Us boxes side by side */
+.aboutus-container {
+  display: flex;
+  justify-content: center;   
+  align-items: flex-start;  
+  gap: 3rem;                 
+  flex-wrap: nowrap;          
+}
+
+@media (max-width: 900px) {
+  .aboutus-container {
+    flex-wrap: wrap;         /* يخليهم ينزلون تحت بعض على الجوال */
+    justify-content: center;
+  }
+}
+
 
 /* STAFF PROFILE PAGE  */
 
@@ -1411,6 +1427,7 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
