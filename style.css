@@ -957,23 +957,6 @@ STYLES FOR SERVICES.HTML
       background-color: #fff5f9;
     }
 
-    .btn-submit {
-      background: linear-gradient(120deg, var(--color-primary), var(--color-primary-dark));
-      color: white;
-      border: none;
-      width: 100%;
-      padding: 10px;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    .btn-submit:hover {
-    background: linear-gradient(120deg, var(--color-primary-dark), var(--color-primary));
-  transform: translateY(-3px);
-    }
 
    /*-------------------------ghena end----------------------*/
 
@@ -1354,6 +1337,7 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
