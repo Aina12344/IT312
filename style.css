@@ -1159,7 +1159,7 @@ h2 {
   color: #a0145a !important;
   text-align: center;
   white-space: normal; /* allow full text display */
-  word-break: break-word; /* wrap long words if needed */
+  overflow-wrap: anywhere;
   overflow: visible; 
 }
 
@@ -1366,6 +1366,7 @@ h2 {
 }
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
