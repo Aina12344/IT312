@@ -465,7 +465,6 @@ h2 {
   background-color: #b02a6b; /* darker shade on hover */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
-/*--------------------------------------norah work---------------------------*/
 
 
 /* ===== BREADCRUMB ===== */
@@ -636,9 +635,7 @@ h2 {
   color: gold;
 }
 
-/*-------------------------------------norah end------------------------------------------------*/
 
-/* -------------------------------------------------ghena work-------------------------------------*/
   .provider-left {
       background: #fff;
       padding: 25px;
@@ -746,10 +743,8 @@ h2 {
       min-height: 70vh;
     }
       
-/* =========================
-   Add Service Page styles
-   ========================= */
- /* ======== Manage Staff Layout Fix ======== */
+/* ========================= Add Service Page styles========================= */
+ /* ======== Manage Staff Layout  ======== */
 
     /* ===== Card ===== */
     .card {
@@ -929,9 +924,6 @@ h2 {
     }
 
 
-   /*-------------------------ghena end----------------------*/
-
-/* ---------------------- start of jawaher's work ---------------------*/
 /*aboutus page*/
 .aboutus-container {
   display: flex;
@@ -1315,7 +1307,7 @@ h2 {
   box-shadow: 0 8px 20px rgba(214, 51, 132, 0.25);
 }
 
-/* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
