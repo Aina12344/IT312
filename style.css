@@ -987,42 +987,6 @@ STYLES FOR SERVICES.HTML
   box-shadow: 0 14px 35px rgba(214, 51, 132, 0.25);
 }
 
-.team-section {
-  margin-bottom: 20px;
-  font-family: var(--font-family-base);
-}
-
-.team-scroll {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding-bottom: 10px;
-  scrollbar-width: thin;
-}
-
-.team-member {
-  flex: 0 0 auto;
-  width: 120px;
-  text-align: center;
-}
-
-.team-member img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 8px;
-}
-
-.team-member-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-primary-dark);
-}
-
-
 /* title */
 .info-box h2 {
   text-align: center;
@@ -1373,6 +1337,7 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
