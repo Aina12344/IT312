@@ -691,11 +691,11 @@ h2 {
 
    .bottom-links {
   margin-top: 20px;
-  display: flex;              /* استخدمنا Flexbox */
-  justify-content: center;    /* وسّط الروابط أفقياً */
-  align-items: center;        /* وسّطها عمودياً */
-  gap: 20px;                  /* مسافة بين الروابط */
-  flex-wrap: wrap;            /* يخليها تنزل تحت إذا الشاشة صغيرة */
+  display: flex;             
+  justify-content: center;   
+  align-items: center;       
+  gap: 20px;                 
+  flex-wrap: wrap;           
 }
 
 .bottom-links a {
@@ -747,10 +747,9 @@ h2 {
     }
       
 /* =========================
-   Add Service Page styles
+         Add Service 
    ========================= */
- /* ======== Manage Staff Layout Fix ======== */
-/* ======== Manage Staff Layout Fix ======== */
+/* ======== Manage Staff  ======== */
 
 .columns {
   display: flex;
@@ -853,7 +852,7 @@ h2 {
       min-height: 70vh;
     }
 
-    /* ====== Left Card (Delete Member) ====== */
+    /* ====== Delete Member ====== */
 .memberD-form {
   background:  #fff;
   border-radius: 15px;
@@ -947,7 +946,7 @@ h2 {
       margin-top: 20px;
     }
 
-    /* ====== Right Card (Add Member) ====== */
+    /* Add Member */
     .add-section .add-formp {
       background: #fff;
       padding: 25px;
@@ -1366,6 +1365,7 @@ h2 {
 }
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
