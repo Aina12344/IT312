@@ -691,11 +691,11 @@ h2 {
 
    .bottom-links {
   margin-top: 20px;
-  display: flex;              /* استخدمنا Flexbox */
-  justify-content: center;    /* وسّط الروابط أفقياً */
-  align-items: center;        /* وسّطها عمودياً */
-  gap: 20px;                  /* مسافة بين الروابط */
-  flex-wrap: wrap;            /* يخليها تنزل تحت إذا الشاشة صغيرة */
+  display: flex;             
+  justify-content: center;   
+  align-items: center;        
+  gap: 20px;                 
+  flex-wrap: wrap;           
 }
 
 .bottom-links a {
@@ -750,37 +750,6 @@ h2 {
    Add Service Page styles
    ========================= */
  /* ======== Manage Staff Layout Fix ======== */
-/* ======== Manage Staff Layout Fix ======== */
-
-.columns {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 40px 0;
-  flex-wrap: wrap;
-}
-  
-.page-subtitle {
-     text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--color-primary-dark);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
-  position: relative;
-    }
-
-    .page-subtitle::after {
-      content: "";
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-  display: block;
-  margin: 0.5rem auto 0 auto;
-  border-radius: 10px;
-    }
 
     /* ===== Card ===== */
     .card {
@@ -884,26 +853,7 @@ h2 {
       box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
     }
 
-.page-subtitle {
-     text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--color-primary-dark);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
-  position: relative;
-    }
 
-    .page-subtitle::after {
-      content: "";
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-  display: block;
-  margin: 0.5rem auto 0 auto;
-  border-radius: 10px;
-    }
     
 
     .member-list {
@@ -1366,6 +1316,7 @@ h2 {
 }
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
