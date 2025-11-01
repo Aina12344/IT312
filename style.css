@@ -921,23 +921,6 @@ STYLES FOR SERVICES.HTML
       font-weight: bold;
     }
 
-    .delete-btn {
-      background: linear-gradient(120deg, var(--color-primary), var(--color-primary-dark));
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .delete-btn:hover {
-       background: linear-gradient(120deg, var(--color-primary-dark), var(--color-primary));
-        transform: translateY(-3px);
-    }
-
     .center {
       text-align: center;
       margin-top: 20px;
@@ -1371,6 +1354,7 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
