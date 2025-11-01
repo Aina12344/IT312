@@ -750,36 +750,7 @@ h2 {
          Add Service 
    ========================= */
 /* ======== Manage Staff  ======== */
-
-.columns {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 40px 0;
-  flex-wrap: wrap;
-}
   
-.page-subtitle {
-     text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--color-primary-dark);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
-  position: relative;
-    }
-
-    .page-subtitle::after {
-      content: "";
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-  display: block;
-  margin: 0.5rem auto 0 auto;
-  border-radius: 10px;
-    }
 
     /* ===== Card ===== */
     .card {
@@ -881,27 +852,6 @@ h2 {
     .memberD-form:hover {
       transform: scale(1.03);
       box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
-    }
-
-.page-subtitle {
-     text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--color-primary-dark);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
-  position: relative;
-    }
-
-    .page-subtitle::after {
-      content: "";
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-  display: block;
-  margin: 0.5rem auto 0 auto;
-  border-radius: 10px;
     }
     
 
@@ -1365,6 +1315,7 @@ h2 {
 }
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
