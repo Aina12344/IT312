@@ -1041,6 +1041,22 @@ STYLES FOR SERVICES.HTML
   transform: scale(1.05);
 }
 
+.info-box.staff-list {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .info-box.staff-list ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .info-box.staff-list ul > div {
+    flex: 0 0 auto;
+  }
+}
+
 /* join us form */
 .joinus-form form {
   display: flex;
@@ -1337,6 +1353,7 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
