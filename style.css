@@ -1041,79 +1041,6 @@ STYLES FOR SERVICES.HTML
   transform: scale(1.05);
 }
 
-/* Staff list layout */
-.staff-scroll {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.staff-scroll li {
-  border-bottom: 1px solid #f7c8e0;
-  padding: 1rem 0;
-}
-
-.staff-scroll li:last-child {
-  border-bottom: none;
-}
-
-.staff-box {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.staff-box img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.staff-box a {
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--color-primary-dark);
-  font-size: 1.1rem;
-  transition: 0.2s;
-}
-
-.staff-box a:hover {
-  color: var(--color-primary);
-  transform: scale(1.05);
-}
-
-/* horizontal scroll on small screens only */
-@media (max-width: 768px) {
-  .staff-scroll {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 1rem;
-  }
-
-  .staff-scroll li {
-    flex: 0 0 auto;
-    border-bottom: none;
-  }
-
-  .staff-box {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* Fix staff list box position */
-.aboutus-container {
-  justify-content: flex-start; 
-}
-
-.aboutus-container .info-box {
-  margin-right: auto;
-}
-
 /* join us form */
 .joinus-form form {
   display: flex;
@@ -1155,23 +1082,6 @@ STYLES FOR SERVICES.HTML
   background: linear-gradient(120deg, var(--color-primary-dark), var(--color-primary));
   transform: translateY(-3px);
 }
-
-/* Keep About Us boxes side by side */
-.aboutus-container {
-  display: flex;
-  justify-content: center;   
-  align-items: flex-start;  
-  gap: 3rem;                 
-  flex-wrap: nowrap;          
-}
-
-@media (max-width: 900px) {
-  .aboutus-container {
-    flex-wrap: wrap;         /* يخليهم ينزلون تحت بعض على الجوال */
-    justify-content: center;
-  }
-}
-
 
 /* STAFF PROFILE PAGE  */
 
@@ -1246,7 +1156,7 @@ STYLES FOR SERVICES.HTML
 .staff-profile ul {
   list-style-type: disc;
   text-align: left;
-  margin-left: 0;
+  margin-left: 0r;
   padding-left: 1rem;
   color: #a0145a !important;
 }
@@ -1427,19 +1337,6 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
