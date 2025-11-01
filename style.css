@@ -1188,7 +1188,7 @@ h2 {
 .staff-profile ul {
   list-style-type: disc;
   text-align: left;
-  margin-left: 0r;
+  margin-left: 0rem;
   padding-left: 1rem;
   color: #a0145a !important;
 }
@@ -1366,6 +1366,7 @@ h2 {
 }
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
