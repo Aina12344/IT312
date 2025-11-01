@@ -1105,6 +1105,16 @@ STYLES FOR SERVICES.HTML
   }
 }
 
+/* Fix staff list box position */
+.aboutus-container {
+  justify-content: flex-start; /* يخلي البوكس يبدأ من اليسار بدل النص */
+}
+
+/* تأكدي إن join us box ما يتأثر */
+.aboutus-container .info-box {
+  margin-right: auto;
+}
+
 /* join us form */
 .joinus-form form {
   display: flex;
@@ -1401,6 +1411,7 @@ STYLES FOR SERVICES.HTML
 
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
