@@ -841,10 +841,7 @@ h2 {
   background: #ffeef6;
   padding: 10px 15px;
   border-radius: 10px;
-}
-.member-list{
-  min-height: 510px;
-}
+
     .memberD-form:hover {
       transform: scale(1.03);
       box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
@@ -1311,6 +1308,7 @@ h2 {
 }
 
 /* ---------------------- end of jawaher's work ---------------------*/
+
 
 
 
