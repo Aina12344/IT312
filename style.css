@@ -45,7 +45,7 @@ h2 {
     background-color: var(--color-surface);
     padding: 1rem 2.5rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 100;
     display: flex;
@@ -1306,16 +1306,103 @@ h2 {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(214, 51, 132, 0.25);
 }
+/* ========================= HOME PAGE RESPONSIVE ========================= */
 
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    background: var(--color-surface);
+    border-top: 1px solid #eee;
+  }
 
+  .navbar a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-left: none !important;
+    border-bottom: 1px solid #eee;
+  }
+}
 
+/* ===== HERO SECTION ===== */
+@media (max-width: 768px) {
+  .page-hero {
+    text-align: center !important;
+    padding: 3rem 1rem;
+  }
 
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
 
+  .page-hero p {
+    font-size: 1rem;
+    margin: auto;
+  }
+}
 
+/* ===== SERVICES CARDS ===== */
+@media (max-width: 992px) {
+  .services-container {
+    justify-content: center;
+  }
 
+  .service-card {
+    max-width: 45%;
+  }
+}
 
+@media (max-width: 600px) {
+  .service-card {
+    max-width: 100%;
+  }
 
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
 
+  .info-overlay {
+    font-size: 0.9rem;
+  }
+}
 
+/* ===== REVIEWS SECTION ===== */
+@media (max-width: 992px) {
+  .reviews-container {
+    justify-content: center;
+  }
 
+  .review-box {
+    max-width: 45%;
+  }
+}
 
+@media (max-width: 600px) {
+  .review-box {
+    max-width: 100%;
+  }
+}
+
+/* ===== OFFERS SECTION ===== */
+@media (max-width: 768px) {
+  .offers-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer-box {
+    max-width: 90%;
+  }
+}
+
+/* ===== FOOTER ===== */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
