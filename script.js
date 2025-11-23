@@ -1,4 +1,3 @@
-// services.js
 
 // Shuffle services on page load and allow sorting
 
@@ -49,3 +48,4 @@ document.addEventListener("DOMContentLoaded", () => {
         return parseFloat(text.replace(/[^0-9.]/g, ""));
     }
 });
+
