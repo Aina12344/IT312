@@ -1,3 +1,47 @@
+/* ==================== DARK THEME ==================== */
+body.theme-dark {
+    --color-primary: #ff7eb9;
+    --color-primary-dark: #ff3d91;
+    --color-text: #e0e0e0;
+    --color-text-light: #c0c0c0;
+    --color-surface: #2c2c2c;
+    --color-background: #1f1f1f;
+    --color-gold: #ffd700;
+    --color-text-dark: #f0f0f0;
+    --shadow-md: 0 8px 30px rgba(255, 61, 145, 0.2);
+    --shadow-lg: 0 18px 40px rgba(255, 61, 145, 0.3);
+}
+body.theme-dark header {
+    background-color: #4a4747;
+}
+body.theme-dark footer,
+body.theme-dark .footer {
+    background-color: #4a4747;
+    color:rgb(194, 192, 192);
+}
+body.theme-dark .footer a,
+body.theme-dark .social a,
+body.theme-dark .copyright 
+{
+    color: rgb(194, 192, 192);
+}
+
+/* Sort bar */
+body.theme-dark .sort-bar select,
+body.theme-dark .sort-bar label {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-primary);
+}
+
+body.theme-dark .customer-breadcrumb,
+body.theme-dark .customer-breadcrumb a {
+
+    
+    color: black;
+}
+
+
 :root {
     --color-primary: #d63384;
     --color-primary-dark: #a1005a;
@@ -1405,4 +1449,90 @@ h2 {
     gap: 10px;
     text-align: center;
   }
+}
+/* ================================
+ BACK TO TOP BUTTON
+================================ */
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  
+  background: linear-gradient(135deg, #ff9ad6, #ff6eb4);
+  color: white;
+
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  display: none;
+  box-shadow: 0 6px 15px rgba(255, 100, 200, 0.4);
+
+  transition: all 0.3s ease-in-out;
+
+  animation: floatUpDown 2s infinite ease-in-out;
+}
+
+/* Hover effect */
+#backToTopBtn:hover {
+  background: linear-gradient(135deg, #ff6eb4, #ff3f9a);
+  transform: scale(1.12);
+  box-shadow: 0 8px 20px rgba(255, 60, 180, 0.6);
+}
+
+
+/* style for the switch button*/
+#themeSwitcher {
+    position: static;
+    top: 80px; /* height of your header + some space */
+    right: 20px;
+    z-index: 999;
+}
+
+#themeSwitcher button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    outline: none;
+}
+
+/* Light theme button */
+#themeSwitcher button#lightThemeBtn {
+    background-color: var(--color-surface);
+    color: var(--color-primary-dark);
+    border: 2px solid var(--color-primary-dark);
+}
+
+#themeSwitcher button#lightThemeBtn:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-surface);
+    box-shadow: 0 6px 12px rgba(161, 0, 90, 0.4);
+}
+
+/* Dark theme button */
+#themeSwitcher button#darkThemeBtn {
+    background-color: var(--color-primary-dark);
+    color: var(--color-surface);
+    border: 2px solid var(--color-primary-dark);
+}
+
+#themeSwitcher button#darkThemeBtn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    box-shadow: 0 6px 12px rgba(214, 51, 132, 0.4);
+}
+
+/* Active theme highlight */
+body.theme-light #lightThemeBtn,
+body.theme-dark #darkThemeBtn {
+    box-shadow: 0 0 0 2px var(--color-gold);
 }
