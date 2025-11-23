@@ -40,14 +40,15 @@
 
 
 <div class="container">
-  <form class="customer-form">
+  <form class="customer-form" id="evaluationForm">
     <label for="srv">Select the Service</label>
-    <select id="srv" name="service" required>
+    <select id="srv" name="service" >
       <option value="">Select the Service</option>
-      <option>Wedding Photography</option>
-      <option>Catering</option>
-      <option>Venue Decoration</option>
+      <option>Photography</option>
+      <option>Planning</option>
       <option>Invitation Design</option>
+      <option>Buffet Services</option>
+      <option>Decoration</option>
     </select>
 
     <label>Rating:</label>
@@ -67,7 +68,7 @@
     </div>
 
     <label for="fb">Feedback:</label>
-    <textarea id="fb" name="feedback" required></textarea>
+    <textarea id="fb" name="feedback" ></textarea>
 
     <input class="customer-btn" type="submit" value="Submit">
   </form>
@@ -91,5 +92,6 @@
   <p class="copyright">© 2025 JoyHub. All Rights Reserved.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

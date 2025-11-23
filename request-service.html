@@ -39,16 +39,15 @@
 </section>
 
 
-<div class="container">
-  <form class="customer-form">
+<form class="customer-form" id="requestForm">
     <label for="custName">Name of Customer</label>
-    <input id="custName" type="text" name="customer_name" required>
+    <input id="custName" type="text" name="customer_name" >
 
     <label for="due">Due Date</label>
-    <input id="due" type="date" name="due_date" required>
+    <input id="due" type="date" name="due_date" >
 
     <label for="service">Service</label>
-    <select id="service" name="service" required>
+    <select id="service" name="service" >
       <option value="">Select the Service</option>
       <option>Photography</option>
       <option>Planning</option>
@@ -61,8 +60,11 @@
     <textarea id="desc" name="description" placeholder=""></textarea>
 
     <input class="customer-btn" type="submit" value="Submit">
-  </form>
-</div>
+</form>
+
+<!-- مكان عرض الطلبات -->
+<div id="requestsContainer" class="container"></div>
+
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
@@ -81,6 +83,7 @@
   </div>
   <p class="copyright">© 2025 JoyHub. All Rights Reserved.</p>
 </footer>
-
+<script src="script.js"></script>
 </body>
+
 </html>
