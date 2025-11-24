@@ -42,26 +42,32 @@
      
       <div class="card">
         <h3 class="page-subtitle">Form to Add</h3>
-        <form class="add-formp">
-          <label>Service Name:</label>
-          <input type="text" placeholder="e.g. Photography">
+       <form class="add-formp" id="serviceForm">
 
-          <label>Description:</label>
-          <textarea placeholder="Enter service details..."></textarea><label>Price:</label>
-          <div class="flex">
-            <input type="text" name="price" placeholder="e.g. 2000">
-            <select>
-              <option>SAR</option>
-              <option>USD</option>
-              <option>EUR</option>
-            </select>
-          </div>
+  <label>Service Name:</label>
+  <input type="text" id="sName" placeholder="e.g. Photography">
 
-          <label>Photo:</label>
-          <input type="file">
+  <label>Description:</label>
+  <textarea id="sDesc" placeholder="Enter service details..."></textarea>
 
-          <button class="btn-submit" type="submit"><i class="fa-solid fa-plus"></i> Add Service</button>
-        </form>
+  <label>Price:</label>
+  <div class="flex">
+    <input type="text" id="sPrice" placeholder="e.g. 2000">
+    <select id="sCurrency">
+      <option>SAR</option>
+      <option>USD</option>
+      <option>EUR</option>
+    </select>
+  </div>
+
+  <label>Photo:</label>
+  <input type="file" id="sPhoto">
+
+  <button class="btn-submit" type="submit">
+    <i class="fa-solid fa-plus"></i> Add Service
+  </button>
+
+</form>
       </div>
     </section>
   </div>
@@ -83,11 +89,9 @@
     </div>
     <p class="copyright">© 2025 JoyHub. All Rights Reserved.</p>
   </footer>
-
+ <script src="script.js"></script>
 </body>
 </html>
-
-
 
 
 
