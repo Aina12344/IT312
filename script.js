@@ -4,16 +4,37 @@
 // =======================
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    /* ============================
+       APPLY THEME ON ALL PAGES
+    ============================= */
+    const savedTheme = localStorage.getItem('theme') || 'theme-light';
+    document.body.classList.add(savedTheme);
+
+    // THEME SWITCHER – Only works on Home page (buttons exist only there)
+    const lightBtn = document.getElementById('lightThemeBtn');
+    const darkBtn = document.getElementById('darkThemeBtn');
+
+    if (lightBtn && darkBtn) {
+        lightBtn.addEventListener('click', () => {
+            document.body.classList.replace('theme-dark', 'theme-light');
+            localStorage.setItem('theme', 'theme-light');
+        });
+
+        darkBtn.addEventListener('click', () => {
+            document.body.classList.replace('theme-light', 'theme-dark');
+            localStorage.setItem('theme', 'theme-dark');
+        });
+    }
+
+
+    /* ============================
+       SHUFFLE + SORTING
+    ============================= */
     const serviceContainer = document.querySelector(".services-list .container");
     const services = Array.from(document.querySelectorAll(".service-item"));
     const sortSelect = document.getElementById("sort-criteria");
 
-    // لو مو بصفحة الخدمات ما راح يلقى العناصر ويمشي عادي
-    if (!serviceContainer || services.length === 0 || !sortSelect) {
-        return;
-    }
-
-    // Function to shuffle array
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -22,24 +43,28 @@ document.addEventListener("DOMContentLoaded", () => {
         return array;
     }
 
-    // Display services
     function displayServices(list) {
         list.forEach(service => serviceContainer.appendChild(service));
     }
 
-    // Initial random order
-    const shuffled = shuffle(services);
-    displayServices(shuffled);
+    if (services.length > 0) displayServices(shuffle(services));
 
-    // Sorting logic
-    sortSelect.addEventListener("change", () => {
+    sortSelect?.addEventListener("change", () => {
         const option = sortSelect.value;
         const sorted = [...services];
 
         if (option === "name-asc") {
-            sorted.sort((a, b) => a.querySelector("h2").textContent.localeCompare(b.querySelector("h2").textContent));
+            sorted.sort((a, b) =>
+                a.querySelector("h2").textContent.localeCompare(
+                    b.querySelector("h2").textContent
+                )
+            );
         } else if (option === "name-desc") {
-            sorted.sort((a, b) => b.querySelector("h2").textContent.localeCompare(a.querySelector("h2").textContent));
+            sorted.sort((a, b) =>
+                b.querySelector("h2").textContent.localeCompare(
+                    a.querySelector("h2").textContent
+                )
+            );
         } else if (option === "price-low") {
             sorted.sort((a, b) => extractPrice(a) - extractPrice(b));
         } else if (option === "price-high") {
@@ -49,11 +74,39 @@ document.addEventListener("DOMContentLoaded", () => {
         displayServices(sorted);
     });
 
-    // Helper to extract numeric price
     function extractPrice(service) {
-        const text = service.querySelector(".price").textContent;
-        return parseFloat(text.replace(/[^0-9.]/g, ""));
+        return parseFloat(service.querySelector(".price").textContent.replace(/[^0-9.]/g, ""));
     }
+
+
+    /* ============================
+       BACK TO TOP BUTTON
+    ============================= */
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    if (backToTopBtn) {
+        window.addEventListener("scroll", () => {
+            backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+
+
+    /* ============================
+       LIVE CLOCK
+    ============================= */
+    const clockEl = document.getElementById("clock");
+    if (clockEl) {
+        function updateClock() {
+            clockEl.innerText = new Date().toLocaleTimeString();
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    }
+
 });
 
 
@@ -253,4 +306,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
 
