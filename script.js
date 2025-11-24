@@ -1,7 +1,4 @@
 // =======================
-// Services Page Script
-// Shuffle services on page load and allow sorting
-// =======================
 
 document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem('theme') || 'theme-light';
@@ -302,6 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
 
 
 
