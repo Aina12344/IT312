@@ -4,14 +4,10 @@
 // =======================
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    /* ============================
-       APPLY THEME ON ALL PAGES
-    ============================= */
     const savedTheme = localStorage.getItem('theme') || 'theme-light';
     document.body.classList.add(savedTheme);
 
-    // THEME SWITCHER – Only works on Home page (buttons exist only there)
+    // THEME SWITCHER
     const lightBtn = document.getElementById('lightThemeBtn');
     const darkBtn = document.getElementById('darkThemeBtn');
 
@@ -306,5 +302,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
 
 
