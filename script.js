@@ -301,5 +301,187 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/****************************************************
+ * ----------- Ghena work ----
+ ****************************************************/
+var defaultMembers = [
+    { name: "Ghena Fahd", email: "ghena@example.com", photo: "img/profile1.png" },
+    { name: "Norah Al Hosain", email: "norah@example.com", photo: "img/profile2.png" },
+    { name: "Jawaher Alrasheed", email: "jawaher@example.com", photo: "img/profile3.png" },
+    { name: "Shahad Homoud", email: "shahad@example.com", photo: "img/profile1.png" }
+];
+
+/****************************************************
+ * ----------- 1) MANAGE STAFF PAGE ----------------
+ ****************************************************/
+function loadMembers() {
+    var listDiv = document.getElementById("memberList");
+    if (!listDiv) return;
+
+    var members = JSON.parse(localStorage.getItem("members"));
+
+    //load default members
+    if (!members || members.length === 0) {
+        members = defaultMembers;
+        localStorage.setItem("members", JSON.stringify(members));
+    }
+
+    listDiv.innerHTML = "";
+
+    for (var i = 0; i < members.length; i++) {
+        listDiv.innerHTML +=
+            '<div class="member">' +
+                '<div class="info">' +
+                    '<img src="' + members[i].photo + '">' +
+                    '<span>' + members[i].name + '</span>' +
+                '</div>' +
+                '<input type="radio" name="selectedMember" value="' + i + '">' +
+            '</div>';
+    }
+}
+
+function setupAddMember() {
+    var form = document.getElementById("addMemberForm");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var name = document.getElementById("mName").value.trim();
+        var email = document.getElementById("mEmail").value.trim();
+        var photo = document.getElementById("mPhoto"); 
+
+        if (!name || !email || photo.files.length === 0) {
+            alert("Please fill all fields and upload a photo.");
+            return;
+        }
+
+        var members = JSON.parse(localStorage.getItem("members")) || [];
+
+        members.push({
+            name: name,
+            email: email,
+            photo: "img/profile1.png" 
+        });
+
+        localStorage.setItem("members", JSON.stringify(members));
+
+        alert("Member added successfully!");
+        form.reset();
+        loadMembers();
+    });
+}
+
+function setupDeleteMember() {
+    var form = document.getElementById("deleteMemberForm");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var selected = document.querySelector("input[name='selectedMember']:checked");
+
+        if (!selected) {
+            alert("Please select a member to delete.");
+            return;
+        }
+
+        var members = JSON.parse(localStorage.getItem("members")) || [];
+        var index = parseInt(selected.value);
+
+        if (!confirm("Are you sure you want to delete this member?")) return;
+
+        members.splice(index, 1);
+
+        localStorage.setItem("members", JSON.stringify(members));
+
+        alert("Member deleted.");
+        loadMembers();
+    });
+}
+
+/****************************************************
+ * ----------- 2) ADD SERVICE PAGE -----------------
+ ****************************************************/
+function setupAddService() {
+    var form = document.getElementById("serviceForm");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var name = document.getElementById("sName").value.trim();
+        var desc = document.getElementById("sDesc").value.trim();
+        var price = document.getElementById("sPrice").value.trim();
+        var photo = document.getElementById("sPhoto"); // NEW
+
+        // NEW: require file upload
+        if (!name || !desc || !price || photo.files.length === 0) {
+            alert("Please fill all fields and upload a photo.");
+            return;
+        }
+
+        if (!isNaN(name.charAt(0))) {
+            alert("Service name cannot start with a number.");
+            return;
+        }
+
+        if (isNaN(price)) {
+            alert("Price must be a number.");
+            return;
+        }
+
+        var services = JSON.parse(localStorage.getItem("services")) || [];
+
+        services.push({
+            name: name,
+            description: desc,
+            price: price
+        });
+
+        localStorage.setItem("services", JSON.stringify(services));
+
+        alert("Service added successfully!");
+        form.reset();
+    });
+}
+
+/****************************************************
+ * ----------- 3) PROVIDER DASHBOARD ----------------
+ ****************************************************/
+function loadServices() {
+    var list = document.getElementById("serviceList");
+    if (!list) return;
+
+    var services = JSON.parse(localStorage.getItem("services")) || [];
+
+    if (services.length === 0) {
+        list.innerHTML = "<p>No services added yet.</p>";
+        return;
+    }
+
+    list.innerHTML = "";
+
+    for (var i = 0; i < services.length; i++) {
+        list.innerHTML +=
+            "<li>" + services[i].name + " — " + services[i].price + " SAR</li>";
+    }
+}
+
+/****************************************************
+ * ------------------- INITIALIZE ------------------
+ ****************************************************/
+document.addEventListener("DOMContentLoaded", function () {
+    loadMembers();
+    setupAddMember();
+    setupDeleteMember();
+
+    setupAddService();
+    loadServices();
+});
+
+
+
+
 
 
