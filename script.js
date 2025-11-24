@@ -481,7 +481,192 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/* ABOUT US page */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const joinForm = document.querySelector(".joinus-form form");
+    if (!joinForm) return;
+
+    joinForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Get all input values
+        const name = joinForm.querySelector("input[name='name']").value.trim();
+        const dob = joinForm.querySelector("input[name='date']").value;
+        const email = joinForm.querySelector("input[name='email']").value.trim();
+        const phone = joinForm.querySelector("input[name='tel']").value.trim();
+        const education = joinForm.querySelector("input[name='education']").value.trim();
+        const expertise = joinForm.querySelector("input[name='expertise']").value.trim();
+        const skills = joinForm.querySelector("input[name='skills']").value.trim();
+        const photoInput = joinForm.querySelector("input[name='photo']");
+
+        let errors = [];
+
+        // Check Empty fields 
+        if (!name || !dob || !email || !phone || !education || !expertise || !skills || photoInput.files.length === 0) {
+            errors.push("All fields are required.");
+        }
+
+        // Name can't start with number
+        if (/^[0-9]/.test(name)) {
+            errors.push("Name cannot start with a number.");
+        }
+
+        // Photo must be an image 
+        if (photoInput.files.length > 0) {
+            const file = photoInput.files[0];
+            const allowedTypes = ["image/jpeg", "image/png", "image/jpg", "image/webp"];
+
+            if (!allowedTypes.includes(file.type)) {
+                errors.push("Photo must be an image file (jpg, png, jpeg, webp).");
+            }
+        }
+
+        // DOB must not be after 2008
+        if (dob) {
+            const birthYear = new Date(dob).getFullYear();
+            if (birthYear > 2008) {
+                errors.push("DOB must be 2008 or earlier.");
+            }
+        }
+
+        // Show errors if exist
+        if (errors.length > 0) {
+            let msg = "Please fix the following:\n\n";
+            errors.forEach(err => msg += "- " + err + "\n");
+            alert(msg);
+            return;
+        }
+
+        // Confirmation message 
+        alert("Thank you, " + name + "! Your application has been submitted successfully.");
+        joinForm.reset();
+    });
+
+});
 
 
+ /* WISHLIST page */
+ 
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ADD TO WISHLIST 
+    var serviceCards = document.querySelectorAll(".service-item");
+
+    serviceCards.forEach(function(card) {
+        var checkbox = card.querySelector(".wishlist-checkbox");
+
+        if (!checkbox) return;
+
+        checkbox.addEventListener("change", function () {
+            var saved = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            var title = card.querySelector("h2").textContent.trim();
+            var desc = card.querySelector(".description").textContent.trim();
+            var img = card.querySelector("img").getAttribute("src");
+
+            if (!title || !img) return;
+
+            if (checkbox.checked) {
+                var exists = false;
+                for (var i = 0; i < saved.length; i++) {
+                    if (saved[i].title === title) {
+                        exists = true;
+                        break;
+                    }
+                }
+                if (!exists) {
+                    saved.push({ title: title, desc: desc, img: img });
+                    alert(title + " added to wishlist");
+                }
+
+            } else {
+                var updated = [];
+                for (var j = 0; j < saved.length; j++) {
+                    if (saved[j].title !== title) {
+                        updated.push(saved[j]);
+                    }
+                }
+                saved = updated;
+                alert(title + " removed from wishlist");
+            }
+
+            localStorage.setItem("wishlist", JSON.stringify(saved));
+        });
+    });
 
 
+    // DISPLAY WISHLIST PAGE 
+    var wishlistPage = document.querySelector(".wishlist-page");
+
+    if (wishlistPage) {
+        var savedItems = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+        if (savedItems.length === 0) {
+            wishlistPage.innerHTML +=
+                '<p class="empty-wishlist-msg">Your wishlist is empty</p>';
+            return;
+        }
+
+        savedItems.forEach(function(item) {
+            var box = document.createElement("div");
+            box.className = "wishlist-item";
+
+            box.innerHTML =
+                '<img src="' + item.img + '">' +
+                '<div class="details">' +
+                    '<strong>' + item.title + '</strong>' +
+                    '<span>' + item.desc + '</span>' +
+                '</div>' +
+                '<div class="wish-buttons">' +
+                    '<button class="remove-wish" data-title="' + item.title + '">Remove</button>' +
+                    '<a href="request-service.html" class="request-wish">Request</a>' +
+                '</div>';
+
+            wishlistPage.appendChild(box);
+        });
+
+        // delete item
+        var removeBtns = document.querySelectorAll(".remove-wish");
+
+        removeBtns.forEach(function(btn) {
+            btn.addEventListener("click", function () {
+                var title = btn.getAttribute("data-title");
+                var saved = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+                var updated = [];
+                for (var i = 0; i < saved.length; i++) {
+                    if (saved[i].title !== title) {
+                        updated.push(saved[i]);
+                    }
+                }
+
+                localStorage.setItem("wishlist", JSON.stringify(updated));
+
+                alert(title + " removed from wishlist");
+                location.reload();
+            });
+        });
+    }
+	
+	// KEEP HEART DARK AFTER REFRESH 
+var serviceCards = document.querySelectorAll(".service-item");
+
+if (serviceCards.length > 0) {
+    var saved = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    serviceCards.forEach(function(card) {
+        var title = card.querySelector("h2").textContent.trim();
+        var checkbox = card.querySelector(".wishlist-checkbox");
+
+        for (var i = 0; i < saved.length; i++) {
+            if (saved[i].title === title) {
+                checkbox.checked = true;
+            }
+        }
+    });
+}
+
+	});
