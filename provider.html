@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
 <!-- Font Awesome for social media icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
- 
+ <script src="script.js"></script>
 </head>
 
 <body>
@@ -33,16 +34,12 @@
 </section>
   <div class="classcontainer">
     <section class="card provider-left">
-     <h3 class="page-subtitle">List of Services</h3>
-      <ul class="custom-list">
-        <li>🎉 Planning</li>
-        <li>💌 Invitation design</li>
-        <li>📸 Photography</li>
-        <li>🍽️ Buffet Services</li>
-        <li>🌸 Decoration</li>
-      </ul>
+      <h3 class="page-subtitle">List of Services</h3>
 
-      <div class="bottom-links">
+      <!-- localStorage -->
+      <ul id="serviceList" class="custom-list"></ul>
+
+     <div class="bottom-links">
         <a href="manage-staff.html">Manage staff page</a>
         <a href="add-service.html">Add service page</a>
       </div>
@@ -71,10 +68,5 @@
 </html>
 
 
-
-
-
-
-
-
+  
 
