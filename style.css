@@ -684,7 +684,7 @@ h2 {
 
 
   .provider-left {
-      background: #fff;
+       background: var(--color-surface);
       padding: 25px;
       width: 450px;
       border-radius: 15px;
@@ -795,7 +795,7 @@ h2 {
 
     /* ===== Card ===== */
     .card {
-      background: #fff;
+      background: var(--color-surface);
       padding: 30px;
       width: 450px;
       border-radius: 15px;
@@ -866,7 +866,7 @@ h2 {
 
     /* ====== Left Card (Delete Member) ====== */
 .memberD-form {
-  background:  #fff;
+  background: var(--color-surface);
   border-radius: 15px;
   padding: 25px 20px;
   box-shadow: 0 4px 15px rgba(214, 51, 132, 0.1);
@@ -941,7 +941,7 @@ h2 {
 
     /* ====== Right Card (Add Member) ====== */
     .add-section .add-formp {
-      background: #fff;
+      background: var(--color-surface);  
       padding: 25px;
       width: 450px;
       border-radius: 15px;
@@ -1656,4 +1656,5 @@ body.theme-dark #darkThemeBtn {
 .request-item p {
   margin-bottom: 0.25rem;
 }
+
 
