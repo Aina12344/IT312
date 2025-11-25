@@ -806,6 +806,7 @@ h2 {
     .card:hover {
       transform: scale(1.03);
       box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+	  
     }
 
    
@@ -932,6 +933,7 @@ h2 {
       gap: 8px;
       color: #800040;
       font-weight: bold;
+	    color: var(--color-primary-dark);
     }
 
     .center {
@@ -956,7 +958,7 @@ h2 {
 
     form label {
       display: block;
-      color: #800040;
+  color: var(--color-primary-dark);
       font-weight: bold;
       margin-top: 10px;
     }
@@ -1656,7 +1658,6 @@ body.theme-dark #darkThemeBtn {
 .request-item p {
   margin-bottom: 0.25rem;
 }
-
 
 
 
