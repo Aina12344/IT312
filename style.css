@@ -118,9 +118,10 @@ h2 {
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
 .navbar a {
@@ -1438,25 +1439,49 @@ h2 {
 
 
 /* ========================= HOME PAGE RESPONSIVE ========================= */
+/* ========================= HOME PAGE RESPONSIVE ========================= */
 
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+}
 @media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
   .navbar {
-    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
     flex-direction: column;
-    width: 100%;
-    gap: 0;
     background: var(--color-surface);
-    border-top: 1px solid #eee;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    right: 0;
   }
 
   .navbar a {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    border-left: none !important;
-    border-bottom: 1px solid #eee;
+    border-left: none;        
+    border-bottom: 1px solid #ddd; 
+    padding: 0.5rem 0;
   }
 }
+
 
 /* ===== HERO SECTION ===== */
 @media (max-width: 768px) {
@@ -1576,7 +1601,7 @@ h2 {
 /* style for the switch button*/
 #themeSwitcher {
     position: static;
-    top: 80px; /* height of your header + some space */
+    top: 80px; 
     right: 20px;
     z-index: 999;
 }

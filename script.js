@@ -1,10 +1,10 @@
-// =======================
-
 document.addEventListener("DOMContentLoaded", () => {
+    // -------------------------------
+    // THEME SWITCHER
+    // -------------------------------
     const savedTheme = localStorage.getItem('theme') || 'theme-light';
     document.body.classList.add(savedTheme);
 
-    // THEME SWITCHER
     const lightBtn = document.getElementById('lightThemeBtn');
     const darkBtn = document.getElementById('darkThemeBtn');
 
@@ -20,61 +20,60 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // -------------------------------
+    // SORTING
+    // -------------------------------
+	const serviceContainer = document.querySelector(".services-list .container");
+	const services = Array.from(document.querySelectorAll(".service-item"));
+	const sortSelect = document.getElementById("sort-criteria");
 
-    /* ============================
-       SHUFFLE + SORTING
-    ============================= */
-    const serviceContainer = document.querySelector(".services-list .container");
-    const services = Array.from(document.querySelectorAll(".service-item"));
-    const sortSelect = document.getElementById("sort-criteria");
+	function displayServices(list) {
+		list.forEach(service => serviceContainer.appendChild(service));
+	}
 
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    }
+	// the default sort is (name a-z):
+	if (services.length > 0) {
+		const sorted = [...services].sort((a, b) =>
+			a.querySelector("h2").textContent.localeCompare(
+				b.querySelector("h2").textContent
+			)
+		);
+		displayServices(sorted);
+	}
 
-    function displayServices(list) {
-        list.forEach(service => serviceContainer.appendChild(service));
-    }
+	sortSelect?.addEventListener("change", () => {
+		const option = sortSelect.value;
+		const sorted = [...services];
 
-    if (services.length > 0) displayServices(shuffle(services));
+		if (option === "name-asc") {
+			sorted.sort((a, b) =>
+				a.querySelector("h2").textContent.localeCompare(
+					b.querySelector("h2").textContent
+				)
+			);
+		} else if (option === "name-desc") {
+			sorted.sort((a, b) =>
+				b.querySelector("h2").textContent.localeCompare(
+					a.querySelector("h2").textContent
+				)
+			);
+		} else if (option === "price-low") {
+			sorted.sort((a, b) => extractPrice(a) - extractPrice(b));
+		} else if (option === "price-high") {
+			sorted.sort((a, b) => extractPrice(b) - extractPrice(a));
+		}
 
-    sortSelect?.addEventListener("change", () => {
-        const option = sortSelect.value;
-        const sorted = [...services];
+		displayServices(sorted);
+	});
 
-        if (option === "name-asc") {
-            sorted.sort((a, b) =>
-                a.querySelector("h2").textContent.localeCompare(
-                    b.querySelector("h2").textContent
-                )
-            );
-        } else if (option === "name-desc") {
-            sorted.sort((a, b) =>
-                b.querySelector("h2").textContent.localeCompare(
-                    a.querySelector("h2").textContent
-                )
-            );
-        } else if (option === "price-low") {
-            sorted.sort((a, b) => extractPrice(a) - extractPrice(b));
-        } else if (option === "price-high") {
-            sorted.sort((a, b) => extractPrice(b) - extractPrice(a));
-        }
-
-        displayServices(sorted);
-    });
-
-    function extractPrice(service) {
-        return parseFloat(service.querySelector(".price").textContent.replace(/[^0-9.]/g, ""));
-    }
+	function extractPrice(service) {
+		return parseFloat(service.querySelector(".price").textContent.replace(/[^0-9.]/g, ""));
+	}
 
 
-    /* ============================
-       BACK TO TOP BUTTON
-    ============================= */
+    // -------------------------------
+    // BACK TO TOP BUTTON
+    // -------------------------------
     const backToTopBtn = document.getElementById("backToTopBtn");
 
     if (backToTopBtn) {
@@ -87,10 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
-    /* ============================
-       LIVE CLOCK
-    ============================= */
+    // -------------------------------
+    // LIVE CLOCK
+    // -------------------------------
     const clockEl = document.getElementById("clock");
     if (clockEl) {
         function updateClock() {
@@ -100,6 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(updateClock, 1000);
     }
 
+    // -------------------------------
+    // RESPONSIVE LAYOUT OF THE NAVBAR
+    // -------------------------------
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.navbar'); 
+
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    }
 });
 
 
@@ -670,3 +679,6 @@ if (serviceCards.length > 0) {
 }
 
 	});
+
+
+
