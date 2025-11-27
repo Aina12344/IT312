@@ -1447,7 +1447,7 @@ h2 {
   cursor: pointer;
 }
 
-.navbar {
+.navbar1 {
   display: flex;
   gap: 1rem;
 }
@@ -1457,7 +1457,7 @@ h2 {
     display: block;
   }
 
-  .navbar {
+  .navbar1 {
     position: fixed;
     top: 0;
     right: -100%;
@@ -1471,11 +1471,11 @@ h2 {
     z-index: 1000;
   }
 
-  .navbar.active {
+  .navbar1.active {
     right: 0;
   }
 
-  .navbar a {
+  .navbar1 a {
     border-left: none;        
     border-bottom: 1px solid #ddd; 
     padding: 0.5rem 0;
