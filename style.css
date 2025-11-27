@@ -1647,18 +1647,9 @@ h2 {
     box-shadow: 0 6px 12px rgba(214, 51, 132, 0.4);
 }
 
-/* Active theme highlight */
-body.theme-light #lightThemeBtn,
-body.theme-dark #darkThemeBtn {
+/* Highlight active button */
+#themeSwitcher button.active {
     box-shadow: 0 0 0 2px var(--color-gold);
-}
-
-#themeSwitcher::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 
 
 
