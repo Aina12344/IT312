@@ -1479,6 +1479,10 @@ h2 {
     border-left: none;        
     border-bottom: 1px solid #ddd; 
     padding: 0.5rem 0;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 600;
+    transition: color 0.2s ease;
   }
 }
 
