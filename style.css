@@ -1653,7 +1653,11 @@ body.theme-dark #darkThemeBtn {
     box-shadow: 0 0 0 2px var(--color-gold);
 }
 
-
+#themeSwitcher::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 
 
