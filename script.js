@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // RESPONSIVE LAYOUT OF THE NAVBAR
     // -------------------------------
     const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.navbar'); 
+    const nav = document.querySelector('.navbar1'); 
 
     if (toggle && nav) {
         toggle.addEventListener('click', () => {
