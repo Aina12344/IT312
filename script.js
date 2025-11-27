@@ -447,7 +447,8 @@ function setupAddService() {
         services.push({
             name: name,
             description: desc,
-            price: price
+            price: price,
+			  photo: "img/services.png"
         });
 
         localStorage.setItem("services", JSON.stringify(services));
@@ -476,7 +477,7 @@ function loadServices() {
     for (var i = 0; i < services.length; i++) {
        list.innerHTML +=
     '<li class="service-item">' +
-        '<img class="service-img" src="img/service-icon.png">' +
+        '<img class="service-img" src=""img/services.png">' +
         '<div class="service-text">' +
             '<span>' + services[i].name + '</span>' +
             '<small>' + services[i].price + ' SAR</small>' +
@@ -689,6 +690,7 @@ if (serviceCards.length > 0) {
 }
 
 	});
+
 
 
 
