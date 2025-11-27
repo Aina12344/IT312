@@ -8,16 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightBtn = document.getElementById('lightThemeBtn');
     const darkBtn = document.getElementById('darkThemeBtn');
 
-    if (lightBtn && darkBtn) {
-        lightBtn.addEventListener('click', () => {
-            document.body.classList.replace('theme-dark', 'theme-light');
-            localStorage.setItem('theme', 'theme-light');
-        });
+    // Function to switch theme
+    function switchTheme(theme) {
+        document.body.classList.remove('theme-light', 'theme-dark');
+        document.body.classList.add(theme);
+        localStorage.setItem('theme', theme);
+    }
 
-        darkBtn.addEventListener('click', () => {
-            document.body.classList.replace('theme-light', 'theme-dark');
-            localStorage.setItem('theme', 'theme-dark');
-        });
+    if (lightBtn && darkBtn) {
+        lightBtn.addEventListener('click', () => switchTheme('theme-light'));
+        darkBtn.addEventListener('click', () => switchTheme('theme-dark'));
     }
 
     // -------------------------------
