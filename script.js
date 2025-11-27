@@ -474,8 +474,18 @@ function loadServices() {
     list.innerHTML = "";
 
     for (var i = 0; i < services.length; i++) {
-        list.innerHTML +=
-            "<li>" + services[i].name + " — " + services[i].price + " SAR</li>";
+       list.innerHTML +=
+    '<li class="service-item">' +
+        '<img class="service-img" src="img/service-icon.png">' +
+        '<div class="service-text">' +
+            '<span>' + services[i].name + '</span>' +
+            '<small>' + services[i].price + ' SAR</small>' +
+        '</div>' +
+    '</li>';
+
+
+    }
+}
     }
 }
 
@@ -681,6 +691,7 @@ if (serviceCards.length > 0) {
 }
 
 	});
+
 
 
 
