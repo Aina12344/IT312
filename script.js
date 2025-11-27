@@ -477,7 +477,7 @@ function loadServices() {
     for (var i = 0; i < services.length; i++) {
        list.innerHTML +=
     '<li class="service-item">' +
-        '<img class="service-img" src=""img/services.png">' +
+        '<img class="service-img" src="img/services.png">' +
         '<div class="service-text">' +
             '<span>' + services[i].name + '</span>' +
             '<small>' + services[i].price + ' SAR</small>' +
@@ -690,6 +690,7 @@ if (serviceCards.length > 0) {
 }
 
 	});
+
 
 
 
