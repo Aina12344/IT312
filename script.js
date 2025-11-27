@@ -1,24 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // -------------------------------
-    // THEME SWITCHER
-    // -------------------------------
     const savedTheme = localStorage.getItem('theme') || 'theme-light';
-    document.body.classList.add(savedTheme);
-
     const lightBtn = document.getElementById('lightThemeBtn');
     const darkBtn = document.getElementById('darkThemeBtn');
 
-    // Function to switch theme
     function switchTheme(theme) {
+        // Clear old theme class and add new one
         document.body.classList.remove('theme-light', 'theme-dark');
         document.body.classList.add(theme);
         localStorage.setItem('theme', theme);
-    }
 
-    if (lightBtn && darkBtn) {
-        lightBtn.addEventListener('click', () => switchTheme('theme-light'));
-        darkBtn.addEventListener('click', () => switchTheme('theme-dark'));
+        // Clear active class from both buttons first
+        lightBtn.classList.remove('active');
+        darkBtn.classList.remove('active');
+
+        if (theme === 'theme-light') {
+            lightBtn.classList.add('active');
+        } else {
+            darkBtn.classList.add('active');
+        }
     }
+    switchTheme(savedTheme);
+    lightBtn.addEventListener('click', () => switchTheme('theme-light'));
+    darkBtn.addEventListener('click', () => switchTheme('theme-dark'));
 
     // -------------------------------
     // SORTING
@@ -30,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	function displayServices(list) {
 		list.forEach(service => serviceContainer.appendChild(service));
 	}
-
 	// the default sort is (name a-z):
 	if (services.length > 0) {
 		const sorted = [...services].sort((a, b) =>
