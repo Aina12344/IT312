@@ -1,81 +1,92 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ======================
+    // THEME SWITCHER
+    // ======================
     const savedTheme = localStorage.getItem('theme') || 'theme-light';
     const lightBtn = document.getElementById('lightThemeBtn');
     const darkBtn = document.getElementById('darkThemeBtn');
 
     function switchTheme(theme) {
-        // Clear old theme class and add new one
         document.body.classList.remove('theme-light', 'theme-dark');
         document.body.classList.add(theme);
         localStorage.setItem('theme', theme);
 
-        // Clear active class from both buttons first
-        lightBtn.classList.remove('active');
-        darkBtn.classList.remove('active');
+        lightBtn?.classList.remove('active');
+        darkBtn?.classList.remove('active');
 
         if (theme === 'theme-light') {
-            lightBtn.classList.add('active');
+            lightBtn?.classList.add('active');
         } else {
-            darkBtn.classList.add('active');
+            darkBtn?.classList.add('active');
         }
     }
+
     switchTheme(savedTheme);
-    lightBtn.addEventListener('click', () => switchTheme('theme-light'));
-    darkBtn.addEventListener('click', () => switchTheme('theme-dark'));
+    lightBtn?.addEventListener('click', () => switchTheme('theme-light'));
+    darkBtn?.addEventListener('click', () => switchTheme('theme-dark'));
 
-    // -------------------------------
+
+
+    // ======================
     // SORTING
-    // -------------------------------
-	const serviceContainer = document.querySelector(".services-list .container");
-	const services = Array.from(document.querySelectorAll(".service-item"));
-	const sortSelect = document.getElementById("sort-criteria");
+    // ======================
+    const serviceContainer = document.querySelector(".services-list .container");
+    const services = Array.from(document.querySelectorAll(".service-item"));
+    const sortSelect = document.getElementById("sort-criteria");
 
-	function displayServices(list) {
-		list.forEach(service => serviceContainer.appendChild(service));
-	}
-	// the default sort is (name a-z):
-	if (services.length > 0) {
-		const sorted = [...services].sort((a, b) =>
-			a.querySelector("h2").textContent.localeCompare(
-				b.querySelector("h2").textContent
-			)
-		);
-		displayServices(sorted);
-	}
+    function displayServices(list) {
+        list.forEach(service => serviceContainer.appendChild(service));
+    }
 
-	sortSelect?.addEventListener("change", () => {
-		const option = sortSelect.value;
-		const sorted = [...services];
+    // default A-Z
+    if (services.length > 0) {
+        const sorted = [...services].sort((a, b) =>
+            a.querySelector("h2").textContent.localeCompare(
+                b.querySelector("h2").textContent
+            )
+        );
+        displayServices(sorted);
+    }
 
-		if (option === "name-asc") {
-			sorted.sort((a, b) =>
-				a.querySelector("h2").textContent.localeCompare(
-					b.querySelector("h2").textContent
-				)
-			);
-		} else if (option === "name-desc") {
-			sorted.sort((a, b) =>
-				b.querySelector("h2").textContent.localeCompare(
-					a.querySelector("h2").textContent
-				)
-			);
-		} else if (option === "price-low") {
-			sorted.sort((a, b) => extractPrice(a) - extractPrice(b));
-		} else if (option === "price-high") {
-			sorted.sort((a, b) => extractPrice(b) - extractPrice(a));
-		}
+    sortSelect?.addEventListener("change", () => {
+        const option = sortSelect.value;
+        const sorted = [...services];
 
-		displayServices(sorted);
-	});
+        if (option === "name-asc") {
+            sorted.sort((a, b) =>
+                a.querySelector("h2").textContent.localeCompare(
+                    b.querySelector("h2").textContent
+                )
+            );
+        } 
+        else if (option === "name-desc") {
+            sorted.sort((a, b) =>
+                b.querySelector("h2").textContent.localeCompare(
+                    a.querySelector("h2").textContent
+                )
+            );
+        } 
+        else if (option === "price-low") {
+            sorted.sort((a, b) => extractPrice(a) - extractPrice(b));
+        } 
+        else if (option === "price-high") {
+            sorted.sort((a, b) => extractPrice(b) - extractPrice(a));
+        }
 
-	function extractPrice(service) {
-		return parseFloat(service.querySelector(".price").textContent.replace(/[^0-9.]/g, ""));
-	}
+        displayServices(sorted);
+    });
+
+    function extractPrice(service) {
+        return parseFloat(
+            service.querySelector(".price").textContent.replace(/[^0-9.]/g, "")
+        );
+    }
 
 
-    // -------------------------------
-    // BACK TO TOP BUTTON
-    // -------------------------------
+    // ======================
+    // BACK TO TOP
+    // ======================
     const backToTopBtn = document.getElementById("backToTopBtn");
 
     if (backToTopBtn) {
@@ -88,9 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // -------------------------------
+
+
+    // ======================
     // LIVE CLOCK
-    // -------------------------------
+    // ======================
     const clockEl = document.getElementById("clock");
     if (clockEl) {
         function updateClock() {
@@ -100,19 +113,20 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(updateClock, 1000);
     }
 
-    // -------------------------------
-    // RESPONSIVE LAYOUT OF THE NAVBAR
-    // -------------------------------
+
+    // ======================
+    // NAVBAR RESPONSIVE
+    // ======================
     const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.navbar1'); 
+    const nav = document.querySelector('.navbar1');
 
     if (toggle && nav) {
         toggle.addEventListener('click', () => {
             nav.classList.toggle('active');
         });
     }
-});
 
+});
 
 
 // =======================

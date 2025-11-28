@@ -1455,19 +1455,48 @@ h2 {
 }
 
 
-/* ========================= HOME PAGE RESPONSIVE ========================= */
-
-
+/* dont show menu when it is on desktop layout */
 .menu-toggle {
-  display: none;
-  font-size: 1.5rem;
+  display: none;       
+  font-size: 1.8rem;
   cursor: pointer;
+  z-index: 1100;
 }
 
+/* had to make another version of navbar for home page becuase of the conflict in about us page */
 .navbar1 {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
+
+.navbar1 a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-left: 1px solid #ddd;
+    transition: color 0.2s ease;
+}
+
+.navbar1 a:first-child {
+    border-left: none;
+}
+
+.navbar1 a:hover,
+.navbar1 a:focus {
+    color: var(--color-primary);
+}
+
+.navbar1 a.active {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ========================= HOME PAGE RESPONSIVE ========================= */
+
 @media (max-width: 768px) {
 
   .menu-toggle {
@@ -1493,16 +1522,20 @@ h2 {
   }
 
   .navbar1 a {
-    border-left: none;        
-    border-bottom: 1px solid #ddd; 
-    padding: 0.5rem 0;
+    border-left: none;
+    border-bottom: 1px solid #ddd;
+    padding: 0.8rem 0;
     text-decoration: none;
     color: var(--color-text);
     font-weight: 600;
     transition: color 0.2s ease;
   }
-}
 
+  .navbar1 a:hover,
+  .navbar1 a:focus {
+    color: var(--color-primary);
+  }
+}
 
 /* ===== HERO SECTION ===== */
 @media (max-width: 768px) {
@@ -1640,33 +1673,33 @@ h2 {
 
 /* Light theme button */
 #themeSwitcher button#lightThemeBtn {
-    background-color: var(--color-surface);
+    background-color: pink;
     color: var(--color-primary-dark);
     border: 2px solid var(--color-primary-dark);
 }
 
 #themeSwitcher button#lightThemeBtn:hover {
-    background-color: var(--color-primary-dark);
+    background-color: rgb(190, 89, 89);
     color: var(--color-surface);
     box-shadow: 0 6px 12px rgba(161, 0, 90, 0.4);
 }
 
 /* Dark theme button */
 #themeSwitcher button#darkThemeBtn {
-    background-color: var(--color-primary-dark);
+    background-color: rgb(175, 47, 92);
     color: var(--color-surface);
     border: 2px solid var(--color-primary-dark);
 }
 
 #themeSwitcher button#darkThemeBtn:hover {
-    background-color: var(--color-primary);
+    background-color:  rgb(129, 38, 70);
     color: var(--color-surface);
-    box-shadow: 0 6px 12px rgba(214, 51, 132, 0.4);
+    box-shadow: 0 6px 12px rgba(91, 26, 59, 0.4);
 }
 
 /* Highlight active button */
 #themeSwitcher button.active {
-    box-shadow: 0 0 0 2px var(--color-gold);
+    box-shadow: 0 0 0 2px var(--color-gold); }
 
 
 
